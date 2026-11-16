@@ -1,0 +1,11 @@
+# EN: Location in the container: ~/.ssh/config  (then: chmod 600 ~/.ssh/config)
+# ES: Ubicación en el contenedor: ~/.ssh/config  (después: chmod 600 ~/.ssh/config)
+#
+# EN: Usage / ES: Uso:
+#   git clone github-vault:<github-user>/<vault-repo>.git ~/vault
+
+Host github-vault
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/vault_key
+  IdentitiesOnly yes

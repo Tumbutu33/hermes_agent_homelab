@@ -1,0 +1,17 @@
+# EN: Location: ~/.config/systemd/user/hermes-dashboard.service
+#     Replace the ExecStart path with the output of: which hermes
+# ES: Ubicación: ~/.config/systemd/user/hermes-dashboard.service
+#     Cambia la ruta de ExecStart por la que devuelva: which hermes
+#
+# EN: Enable with / ES: Activar con:
+#   systemctl --user daemon-reload
+#   systemctl --user enable --now hermes-dashboard.service
+[Unit]
+Description=Hermes dashboard
+
+[Service]
+ExecStart=/home/hermes/.local/bin/hermes dashboard
+Restart=on-failure
+
+[Install]
+WantedBy=default.target

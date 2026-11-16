@@ -1,0 +1,10 @@
+# EN: Lines for the end of /etc/pve/lxc/<ID>.conf on the Proxmox HOST (not in the container).
+#     They give the container access to /dev/net/tun, which Tailscale needs.
+#     Then: pct reboot <ID>
+#
+# ES: Líneas para el final de /etc/pve/lxc/<ID>.conf en el HOST de Proxmox (no en el contenedor).
+#     Dan al contenedor acceso a /dev/net/tun, necesario para Tailscale.
+#     Después: pct reboot <ID>
+
+lxc.cgroup2.devices.allow: c 10:200 rwm
+lxc.mount.entry: /dev/net/tun dev/net/tun none bind,create=file

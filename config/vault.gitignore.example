@@ -1,0 +1,14 @@
+# EN: .gitignore for the root of the vault repository.
+#     Save it as ".gitignore" in the folder that contains the vault.
+#     Patterns start with **/ so they apply inside the vault subfolder.
+#
+# ES: .gitignore para la raíz del repositorio del vault.
+#     Guárdalo como ".gitignore" en la carpeta que contiene el vault.
+#     Los patrones empiezan por **/ para que se apliquen dentro de la subcarpeta del vault.
+
+**/.obsidian/workspace.json
+**/.obsidian/workspace-mobile.json
+**/.obsidian/cache/
+**/.trash/
+.DS_Store
+desktop.ini

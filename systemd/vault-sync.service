@@ -1,0 +1,8 @@
+# EN: Location: ~/.config/systemd/user/vault-sync.service
+# ES: Ubicación: ~/.config/systemd/user/vault-sync.service
+[Unit]
+Description=Sync Obsidian vault
+
+[Service]
+Type=oneshot
+ExecStart=%h/sync-vault.sh

@@ -1,0 +1,15 @@
+# EN: Location: ~/.config/systemd/user/vault-sync.timer
+# ES: Ubicación: ~/.config/systemd/user/vault-sync.timer
+#
+# EN: Enable with / ES: Activar con:
+#   systemctl --user daemon-reload
+#   systemctl --user enable --now vault-sync.timer
+[Unit]
+Description=Sync Obsidian vault every 5 minutes
+
+[Timer]
+OnBootSec=1min
+OnUnitActiveSec=5min
+
+[Install]
+WantedBy=timers.target
